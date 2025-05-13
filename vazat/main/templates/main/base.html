@@ -17,10 +17,10 @@
             <navbar class="header-nav pt-4">
                 <ul class="header-list d-flex">
                     <li>
-                        <a href="/" class="nav-a m-3">Home</a>
+                        <a href="/" class="nav-a m-3">Главная</a>
                     </li>
                     <li>
-                        <a href="#" class="nav-a m-3">Shop</a>
+                        <a href="#" class="nav-a m-3">Магазин</a>
                     </li>
                 </ul>
             </navbar>
@@ -32,11 +32,15 @@
             </div>
         </div>
     </header>
-
-
-
-
-
+    <div class="container">
+        {% block content %}
+        {% endblock content %}
+    </div>
+    <img src="{% static 'img/frame1.png' %}" class="frame1" alt="">
+    <img src="{% static 'img/frame2.png' %}" class="frame2" alt="">
+    <img src="{% static 'img/frame3.png' %}" class="frame3" alt="">
+    <img src="{% static 'img/frame4.png' %}" class="frame4" alt="">
+    
 
 
     {% comment %} js for bootstrap {% endcomment %}
