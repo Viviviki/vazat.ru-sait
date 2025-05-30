@@ -11,7 +11,7 @@
         </div>
         <div class="home-recomendation">
             <div class="rec-title mb-4">
-                <h3><span>Популярная пряжа</span></h3>
+                <h3><span>Популярные товары</span></h3>
             </div>
         </div>
         <div class="home-cards d-flex gap-4">
@@ -23,11 +23,11 @@
                 
                 {% if product.discount %}
                 <div class="cart-discount d-flex gap-2">
-                    <p class="line">{{ product.price }}</p>
-                    <p>{{ product.sell_price }}</p>
+                    <p class="line">{{ product.price }} руб</p>
+                    <p>{{ product.sell_price }} руб</p>
                 </div>
                 {% else %}
-                    <p class="price">{{ product.price }}></p>
+                    <p class="price">{{ product.price }} руб </p>
                 {% endif %}
             </a>
             {% endfor %}
