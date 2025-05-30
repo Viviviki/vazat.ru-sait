@@ -29,7 +29,7 @@
             </div>
             <div class="header-profile pt-2">
                 <a href="{% url "cart:cart_detail" %}"><img src="{% static 'img/korsina.png' %}" class="korsina" alt=""></a>
-                <a href="#" class="m-2">Вход</a>
+                <a href="{% url "users:login" %}" class="m-2">Вход</a>
                 <p class="cart-quantity">
                     {% with cart_quantity=cart|length %}
                         {% if cart_quantity > 0 %}
@@ -46,11 +46,6 @@
         {% block content %}
         {% endblock content %}
     </div>
-    {% comment %} <img src="{% static 'img/frame1.png' %}" class="frame1" alt="">
-    <img src="{% static 'img/frame2.png' %}" class="frame2" alt="">
-    <img src="{% static 'img/frame3.png' %}" class="frame3" alt="">
-    <img src="{% static 'img/frame4.png' %}" class="frame4" alt="">
-     {% endcomment %}
 
 
     {% comment %} js for bootstrap {% endcomment %}

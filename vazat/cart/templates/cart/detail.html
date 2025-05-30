@@ -36,7 +36,7 @@
                                     <p>$ {{ product.sell_price }}</p>
                                 </div>
                             {% else %}
-                                <p class="price">$ {{ product.price }}></p>
+                                <p class="price">$ {{ product.price }}</p>
                             {% endif %}
                         </div>
                     </div>
@@ -50,7 +50,7 @@
             <a href="/shop" class="cart-btn">Продолжить покупки</a>
             {% with cart_quantity=cart|length %}
                 {% if cart_quantity > 0 %}
-                <a href="#" class="cart-btn">Перейти к оформлению</a>
+                <a href="{% url "orders:order_create" %}" class="cart-btn">Перейти к оформлению</a>
                 {% endif %}
             {% endwith %}
         </div>
